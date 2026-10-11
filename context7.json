@@ -1,0 +1,12 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "harper-py",
+  "description": "Python bindings for Harper, the offline English grammar checker written in Rust",
+  "excludeFolders": ["target", "tests", "benchmarks"],
+  "rules": [
+    "Import from `harper`; the PyPI name is harper-py.",
+    "Create one `harper.Linter()` and reuse it: construction loads the dictionary.",
+    "Spans are Python str indices: text[lint.span.start:lint.span.end] == lint.problem_text.",
+    "The API mirrors harper.js's Linter in snake_case; lint options are keyword arguments (language, regex_mask, force_all_headings, dedup, isolate_english)."
+  ]
+}
