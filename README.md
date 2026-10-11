@@ -42,7 +42,7 @@ has the tour.
 | | harper-py | [language-tool-python](https://github.com/jxmorris12/language_tool_python) |
 | --- | --- | --- |
 | Runtime | none, the wheel is self-contained | [Java ≥ 17](https://github.com/jxmorris12/language_tool_python#requirements) and a local LanguageTool server it starts |
-| Download | 9.7 MB wheel | a 60 kB wheel, then the [LanguageTool 6.8 zip](https://github.com/jxmorris12/language_tool_python/releases/tag/LanguageTool-6.8) (259 MB) on first use |
+| Download | 9.7–10.4 MB wheel, depending on the platform | a 60 kB wheel, then the [LanguageTool 6.8 zip](https://github.com/jxmorris12/language_tool_python/releases/tag/LanguageTool-6.8) (259 MB) on first use |
 | Cold start | 0.23 s: `import harper` + `Linter()` in a fresh process | starts a JVM server (not measured: no Java on this machine) |
 | Lint 1007 words | 23 ms (first call in a process: 95 ms) | — |
 
