@@ -49,7 +49,7 @@ class SuggestionKind(enum.IntEnum):
 class Span:
     """Two code point indices into a ``str``: ``text[span.start:span.end]``."""
 
-    def __init__(self, start: int, end: int) -> None: ...
+    def __new__(cls, start: int, end: int) -> Span: ...
     @property
     def start(self) -> int: ...
     @property
@@ -58,7 +58,7 @@ class Span:
         """The number of code points the span covers."""
     def is_empty(self) -> bool:
         """Whether the span covers no code points."""
-    def __eq__(self, other: object) -> bool: ...
+    def __eq__(self, value: object, /) -> bool: ...
     def __hash__(self) -> int: ...
 
 @final
@@ -71,7 +71,7 @@ class Suggestion:
     @property
     def replacement_text(self) -> str:
         """The text that is going to replace the problematic section; empty for ``REMOVE``."""
-    def __eq__(self, other: object) -> bool: ...
+    def __eq__(self, value: object, /) -> bool: ...
     def __hash__(self) -> int: ...
 
 @final
@@ -118,8 +118,8 @@ class Linter:
     ``Linter`` raises ``RuntimeError``. Create one per thread to lint in parallel.
     """
 
-    def __init__(self, dialect: Dialect = Dialect.AMERICAN) -> None:
-        """Create a linter for the given English dialect."""
+    def __new__(cls, dialect: Dialect | int = ...) -> Linter:
+        """Create a linter for the given English dialect, American by default."""
     @property
     def dialect(self) -> Dialect:
         """The dialect of English this linter was constructed for.
@@ -134,7 +134,7 @@ class Linter:
         self,
         text: str,
         *,
-        language: Language = Language.MARKDOWN,
+        language: Language | str = ...,
         regex_mask: str | None = None,
         force_all_headings: bool = False,
         dedup: bool = True,
@@ -144,7 +144,8 @@ class Linter:
 
         Args:
             text: The text to check.
-            language: The markup language of ``text``. An unknown value warns and
+            language: The markup language of ``text``, Markdown by default; harper.js's
+                strings (``"plaintext"``, ...) work too. An unknown value warns and
                 falls back to Markdown, as harper.js does.
             regex_mask: Text matching this regular expression is not linted. If it
                 cannot be parsed, a warning is issued and ``[]`` is returned.
@@ -156,7 +157,7 @@ class Linter:
         self,
         text: str,
         *,
-        language: Language = Language.MARKDOWN,
+        language: Language | str = ...,
         regex_mask: str | None = None,
         force_all_headings: bool = False,
         dedup: bool = True,
