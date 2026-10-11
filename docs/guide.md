@@ -122,6 +122,16 @@ position, so it stays ignored when text elsewhere in the document changes. `cont
 gives that hash and `ignore_lint_hash(hash)` ignores by it; `clear_ignored_lints()` forgets
 all of them.
 
+## Saving lints
+
+```python
+from harper import Lint
+data = lint.to_json()              # str; Suggestion and Span have to_json too
+restored = Lint.from_json(data)    # works with apply_suggestion, ignore_lint, ...
+```
+
+This is harper-wasm's JSON format, except that spans count code points, not UTF-16 units.
+
 ## Statistics
 
 ```python

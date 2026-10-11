@@ -20,6 +20,13 @@ on the way in, one for one, which is what wasm-bindgen does to a JS string with 
 surrogate: indices still line up with the input, but `problem_text` and the text returned
 by `apply_suggestion` carry U+FFFD where the input had the surrogate.
 
+The same goes for the JSON of `Lint.to_json()` / `Span.to_json()` (section 5): its `span`
+is in code points, where harper.js writes UTF-16 code units. For text with characters
+outside the Basic Multilingual Plane (most emoji), JSON from harper.js and from harper-py
+therefore carry different outer `span` numbers for the same lint. The lint's position
+inside `inner`, which is what `apply_suggestion`, `ignore_lint` and `context_hash` use, is
+in code points in both.
+
 ## 2. Synchronous, no JS runtime plumbing
 
 Every method returns its result instead of a `Promise`. There is no `setup()` (the
@@ -33,7 +40,8 @@ archive, which `zipfile` reads and writes.
 Where harper.js writes to the console, Python issues a `UserWarning` with the same text:
 an invalid `regex_mask` ("Ignoring lint request because the regex mask is invalid: …",
 then `[]` / `{}` is returned as in harper.js) and an unknown `language` ("Unknown Harper
-language '…'; using markdown.", then Markdown is used as in harper.js).
+language '…'; using markdown.", then Markdown is used as in harper.js). These are the only
+console messages harper.js prints; Harper's crates log nothing.
 
 ## 3. Dicts instead of the JSON twins
 
@@ -69,6 +77,11 @@ reset; setting the current dialect does nothing.
   `Span.new(start, end)` is `Span(start, end)`. `Span` and `Suggestion` are immutable,
   compare and hash by value, and have a readable `repr`; so does `Lint`, which compares by
   identity.
+- `to_json()` and the static `from_json(json)` exist on `Lint`, `Suggestion` and `Span`, as
+  harper-wasm's `make_serialize_fns_for!` defines them, with the same serde fields; a lint
+  rebuilt with `from_json` works with every `Linter` method that takes one. `from_json`
+  raises `ValueError` with serde's message where harper.js throws it. Span units differ
+  (section 1). There is no pickling, as harper.js has none.
 - `Dialect` and `SuggestionKind` are `enum.IntEnum`s with harper-wasm's numeric values.
   `Language` is a `str` enum whose values are harper.js's strings, so
   `language="plaintext"` works as in harper.js.
@@ -85,8 +98,8 @@ reset; setting the current dialect does nothing.
 ## 6. Errors
 
 A `Result::Err` of harper-wasm (a malformed config, ignored-lints JSON, stats file or
-Weirpack) raises `ValueError` with the upstream message; in harper.js it is a thrown
-string.
+Weirpack, or `from_json` input) raises `ValueError` with the upstream message; in harper.js
+it is a thrown string.
 
 ## 7. Threads
 
@@ -94,18 +107,5 @@ JS has no shared-memory threads; Python does. The GIL is released while linting 
 constructing a `Linter`, so linters in different threads run in parallel. One `Linter` is
 not thread-safe: it can be used from any thread, but a call made while another thread is
 inside a call on the same `Linter` raises `RuntimeError("Already borrowed")` instead of
-waiting.
-
-## Open questions
-
-- **`to_json()` / `from_json()` on `Lint`, `Suggestion` and `Span`.** harper-wasm defines
-  them and they are reachable from harper.js (its `WorkerLinter` uses them to pass lints
-  between threads). The spec's API list does not name them, so they are not bound: a lint
-  cannot be serialized and rebuilt in another process. Bind them (or pickling) if wanted.
-- **Thread model.** The spec allowed an `unsendable` `Linter`; that variant aborts with a
-  Rust panic (`PanicException`, a `BaseException`) when touched from a second thread.
-  The binding uses PyO3's ordinary borrow checking instead (section 7), which needs no
-  extra code because Harper's types are `Send` and `Sync`.
-- **Console output.** harper.js's two console warnings (both from the binding layer;
-  Harper's crates log nothing) became `UserWarning`s (section 2). `logging` would be the
-  other choice.
+waiting. (PyO3's `unsendable` alternative would forbid other threads altogether and fail
+there with a Rust panic, `PanicException`, which is a `BaseException`.)
