@@ -2,6 +2,10 @@
 
 harper-cli reports character (code point) offsets, which are this package's span units.
 `regen.py` rebuilds expected.json from the CLI.
+
+The corpus avoids text where Harper itself is not deterministic: RegularIrregulars collects
+its suggestions in a randomly seeded hash set, so "arised" gets ['arose', 'arisen'] or
+['arisen', 'arose'] from run to run, in harper-cli and harper.js alike.
 """
 
 import json

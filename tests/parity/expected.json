@@ -405,28 +405,14 @@
     "rule": "AnA",
     "kind": "Miscellaneous",
     "span": {
-     "char_start": 33,
-     "char_end": 34
+     "char_start": 34,
+     "char_end": 35
     },
     "message": "Incorrect indefinite article.",
     "suggestions": [
      "Replace with: “an”"
     ],
     "matched_text": "a"
-   },
-   {
-    "rule": "RegularIrregulars",
-    "kind": "Grammar",
-    "span": {
-     "char_start": 22,
-     "char_end": 28
-    },
-    "message": "Use the irregular form 'arose' or 'arisen' instead of 'arised'",
-    "suggestions": [
-     "Replace with: “arose”",
-     "Replace with: “arisen”"
-    ],
-    "matched_text": "arised"
    }
   ]
  },
