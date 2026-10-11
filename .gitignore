@@ -1,0 +1,9 @@
+target/
+dist/
+__pycache__/
+*.so
+*.pyd
+.pytest_cache/
+.hypothesis/
+.venv/
+.DS_Store

@@ -1,0 +1,58 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "harper-py"
+dynamic = ["version"]
+description = "Python bindings for Harper, the fast offline English grammar checker written in Rust — no Java, no server"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Maksim Burtsev", email = "mburtsev17@gmail.com" }]
+keywords = [
+    "grammar",
+    "grammar checker",
+    "spell checker",
+    "spelling",
+    "proofreading",
+    "english",
+    "linter",
+    "prose",
+    "writing",
+    "languagetool alternative",
+    "harper",
+    "rust",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Documentation = "https://github.com/Maksim-Burtsev/harper-py/blob/main/docs/guide.md"
+Source = "https://github.com/Maksim-Burtsev/harper-py"
+Changelog = "https://github.com/Maksim-Burtsev/harper-py/blob/main/CHANGELOG.md"
+Issues = "https://github.com/Maksim-Burtsev/harper-py/issues"
+
+[project.optional-dependencies]
+test = ["pytest", "hypothesis"]
+
+[tool.maturin]
+python-source = "python"
+module-name = "harper._harper"
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
