@@ -58,6 +58,11 @@ class Span:
         """The number of code points the span covers."""
     def is_empty(self) -> bool:
         """Whether the span covers no code points."""
+    def to_json(self) -> str:
+        """Serialize to JSON, as harper-wasm's ``to_json`` (spans in code points)."""
+    @staticmethod
+    def from_json(json: str) -> Span:
+        """Rebuild from :meth:`to_json` output. Raises ``ValueError`` if it is malformed."""
     def __eq__(self, value: object, /) -> bool: ...
     def __hash__(self) -> int: ...
 
@@ -71,6 +76,11 @@ class Suggestion:
     @property
     def replacement_text(self) -> str:
         """The text that is going to replace the problematic section; empty for ``REMOVE``."""
+    def to_json(self) -> str:
+        """Serialize to JSON, as harper-wasm's ``to_json`` (spans in code points)."""
+    @staticmethod
+    def from_json(json: str) -> Suggestion:
+        """Rebuild from :meth:`to_json` output. Raises ``ValueError`` if it is malformed."""
     def __eq__(self, value: object, /) -> bool: ...
     def __hash__(self) -> int: ...
 
@@ -105,6 +115,14 @@ class Lint:
     @property
     def suggestion_count(self) -> int:
         """Equivalent to ``len(lint.suggestions)``."""
+    def to_json(self) -> str:
+        """Serialize to JSON, as harper-wasm's ``to_json`` (spans in code points).
+
+        A lint rebuilt with :meth:`from_json` works with every ``Linter`` method that
+        takes a lint, in this or another process."""
+    @staticmethod
+    def from_json(json: str) -> Lint:
+        """Rebuild from :meth:`to_json` output. Raises ``ValueError`` if it is malformed."""
 
 @final
 class Linter:

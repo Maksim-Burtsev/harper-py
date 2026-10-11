@@ -25,7 +25,7 @@ use harper_stats::{Record, RecordKind, Stats};
 use pyo3::exceptions::{PyUserWarning, PyValueError};
 use pyo3::prelude::*;
 use pyo3::types::{PyDict, PyString};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
 /// `Result::Err` of harper-wasm becomes `ValueError` with the same message.
 fn value_error(err: impl ToString) -> PyErr {
@@ -36,6 +36,15 @@ fn value_error(err: impl ToString) -> PyErr {
 fn to_py<'py>(py: Python<'py>, value: &impl Serialize) -> PyResult<Bound<'py, PyAny>> {
     let json = serde_json::to_string(value).map_err(value_error)?;
     py.import("json")?.call_method1("loads", (json,))
+}
+
+/// harper-wasm's `make_serialize_fns_for!`: `to_json` / `from_json` on Lint, Suggestion, Span.
+fn to_json(value: &impl Serialize) -> String {
+    serde_json::to_string(value).unwrap()
+}
+
+fn from_json<T: for<'de> Deserialize<'de>>(json: &str) -> PyResult<T> {
+    serde_json::from_str(json).map_err(value_error)
 }
 
 fn json_dumps(obj: &Bound<'_, PyAny>) -> PyResult<String> {
@@ -77,7 +86,7 @@ fn py_enum<'py>(
     py.import("harper")?.getattr(class)?.call1((value,))
 }
 
-#[derive(Debug, Copy, Clone)]
+#[derive(Serialize, Deserialize, Debug, Copy, Clone)]
 enum Language {
     Plain,
     Markdown,
@@ -709,13 +718,22 @@ fn get_default_lint_config(py: Python<'_>) -> PyResult<Bound<'_, PyAny>> {
 
 /// A suggestion to fix a Lint.
 #[pyclass(frozen, eq, hash, module = "harper")]
-#[derive(PartialEq, Eq, Hash)]
+#[derive(Serialize, Deserialize, PartialEq, Eq, Hash)]
 struct Suggestion {
     inner: harper_core::linting::Suggestion,
 }
 
 #[pymethods]
 impl Suggestion {
+    fn to_json(&self) -> String {
+        to_json(self)
+    }
+
+    #[staticmethod]
+    fn from_json(json: &str) -> PyResult<Self> {
+        from_json(json)
+    }
+
     #[getter]
     fn kind<'py>(&self, py: Python<'py>) -> PyResult<Bound<'py, PyAny>> {
         use harper_core::linting::Suggestion::*;
@@ -748,6 +766,7 @@ impl Suggestion {
 
 /// An error found in provided text.
 #[pyclass(frozen, module = "harper")]
+#[derive(Serialize, Deserialize)]
 struct Lint {
     inner: harper_core::linting::Lint,
     span: Span,
@@ -771,6 +790,15 @@ impl Lint {
 
 #[pymethods]
 impl Lint {
+    fn to_json(&self) -> String {
+        to_json(self)
+    }
+
+    #[staticmethod]
+    fn from_json(json: &str) -> PyResult<Self> {
+        from_json(json)
+    }
+
     #[getter]
     fn span(&self) -> Span {
         self.span
@@ -829,7 +857,7 @@ impl Lint {
 
 /// Two code point indices into a `str`: a start and an end.
 #[pyclass(frozen, eq, hash, skip_from_py_object, module = "harper")]
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq, Eq, Hash)]
 struct Span {
     #[pyo3(get)]
     start: usize,
@@ -839,6 +867,16 @@ struct Span {
 
 #[pymethods]
 impl Span {
+    #[allow(clippy::wrong_self_convention)] // PyO3 methods take &self
+    fn to_json(&self) -> String {
+        to_json(self)
+    }
+
+    #[staticmethod]
+    fn from_json(json: &str) -> PyResult<Self> {
+        from_json(json)
+    }
+
     #[new]
     fn new(start: usize, end: usize) -> Self {
         Self { start, end }

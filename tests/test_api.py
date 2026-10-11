@@ -146,3 +146,32 @@ def test_span_invariant_on_random_unicode(text):
         for lints in LINTER.organized_lints(text, language=language).values():
             for lint in lints:
                 assert text[lint.span.start : lint.span.end] == lint.problem_text
+
+
+def test_json_round_trip():
+    text = "✉️👋 This is an test."
+    (lint,) = LINTER.lint(text)
+    again = harper.Lint.from_json(lint.to_json())
+    assert again.to_json() == lint.to_json()
+    assert (again.span, again.problem_text, again.message) == (lint.span, lint.problem_text, lint.message)
+    assert again.suggestions == lint.suggestions
+    assert harper.Suggestion.from_json(lint.suggestions[0].to_json()) == lint.suggestions[0]
+    assert Span.from_json(lint.span.to_json()) == lint.span == Span.from_json('{"start": 12, "end": 14}')
+
+
+def test_lint_from_json_works_with_the_linter():
+    text = "✉️👋 This is an test."
+    (original,) = LINTER.lint(text)
+    restored = harper.Lint.from_json(original.to_json())
+    assert LINTER.context_hash(text, restored) == LINTER.context_hash(text, original)
+    assert LINTER.apply_suggestion(text, restored, restored.suggestions[0]) == "✉️👋 This is a test."
+
+    linter = Linter()
+    linter.ignore_lint(text, restored)
+    assert linter.lint(text) == []
+
+
+def test_from_json_errors_are_value_errors():
+    for cls in (harper.Lint, harper.Suggestion, Span):
+        with pytest.raises(ValueError):
+            cls.from_json("{}")
