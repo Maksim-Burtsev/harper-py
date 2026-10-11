@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-10-11)
 
 First release: bindings for Harper 2.11.0 mirroring harper.js's `Linter` interface.
 
