@@ -1,0 +1,210 @@
+[
+ {
+  "language": "plaintext",
+  "text": "The the problem is that that."
+ },
+ {
+  "language": "plaintext",
+  "text": "This is an test of exprting lints."
+ },
+ {
+  "language": "plaintext",
+  "text": "I don't ned it."
+ },
+ {
+  "language": "plaintext",
+  "text": "Their going to the store tomorow, and there car is broken."
+ },
+ {
+  "language": "plaintext",
+  "text": "Its a nice day, isnt it? Lets go outside."
+ },
+ {
+  "language": "plaintext",
+  "text": "She dont like apples, she like oranges."
+ },
+ {
+  "language": "plaintext",
+  "text": "We was there when it happend."
+ },
+ {
+  "language": "plaintext",
+  "text": "Could of been worse, should of been better."
+ },
+ {
+  "language": "plaintext",
+  "text": "This sentence has two  spaces between words."
+ },
+ {
+  "language": "plaintext",
+  "text": "He said \"hello there and walked away."
+ },
+ {
+  "language": "plaintext",
+  "text": "The United States is a big country."
+ },
+ {
+  "language": "plaintext",
+  "text": "i think i will go home now."
+ },
+ {
+  "language": "plaintext",
+  "text": "Wait for it..."
+ },
+ {
+  "language": "plaintext",
+  "text": "This is a really long sentensd with some errorz in it, which in an old version of Harper, would get removedd when the bigger \"Long Sentences\" lint was ignored, that isn't what we woant, so we are writing a test for that exact problem."
+ },
+ {
+  "language": "plaintext",
+  "text": "outstandin g"
+ },
+ {
+  "language": "plaintext",
+  "text": "I adore this akljsfhl group!"
+ },
+ {
+  "language": "plaintext",
+  "text": "An unique opportunity arised for a honest man."
+ },
+ {
+  "language": "plaintext",
+  "text": "Alot of people dont know the diffrence between affect and effect."
+ },
+ {
+  "language": "plaintext",
+  "text": "En la mañana, como a dish de los huevos, un poquito of tocino, y a lot of leche."
+ },
+ {
+  "language": "plaintext",
+  "text": "The color of the neighbour's centre was grey."
+ },
+ {
+  "language": "plaintext",
+  "text": "✉️👋👍✉️🚀✉️🌴 This is to show the offset issue sdssda is it there?"
+ },
+ {
+  "language": "plaintext",
+  "text": "👋 Helo wrold! 🎉🎉 Thsi is grate."
+ },
+ {
+  "language": "plaintext",
+  "text": "Family emoji 👨‍👩‍👧‍👦 then a typo: recieve."
+ },
+ {
+  "language": "plaintext",
+  "text": "Flags 🇺🇸🇬🇧 and skin tones 👍🏽 before teh word."
+ },
+ {
+  "language": "plaintext",
+  "text": "東京は日本の首都です。 But this sentense is English."
+ },
+ {
+  "language": "plaintext",
+  "text": "中文文本 mixed with an misteak and 한국어 텍스트."
+ },
+ {
+  "language": "plaintext",
+  "text": "日本語のテキストだけです。"
+ },
+ {
+  "language": "plaintext",
+  "text": "Math: 𝔸𝔹ℂ and 𝓍 then an apple and a orange."
+ },
+ {
+  "language": "plaintext",
+  "text": "Café naïve résumé coöperate, then speling."
+ },
+ {
+  "language": "plaintext",
+  "text": "Combining: é ä then the the end."
+ },
+ {
+  "language": "plaintext",
+  "text": "Arabic مرحبا بالعالم and Hebrew שלום then a eror."
+ },
+ {
+  "language": "plaintext",
+  "text": "Zero​width space and non breaking space bfore."
+ },
+ {
+  "language": "plaintext",
+  "text": "Tabs\there and\r\nWindows line endings wiht typo."
+ },
+ {
+  "language": "plaintext",
+  "text": ""
+ },
+ {
+  "language": "plaintext",
+  "text": "   \n\n  "
+ },
+ {
+  "language": "markdown",
+  "text": "# this heading is not title case\n\nThis is an test."
+ },
+ {
+  "language": "markdown",
+  "text": "Some `inline cod with typo` and a realy bad word."
+ },
+ {
+  "language": "markdown",
+  "text": "```python\nprint('helo wrold')\n```\n\nAfter the the code."
+ },
+ {
+  "language": "markdown",
+  "text": "- First iten\n- Second item item\n- Third 🚀 itme"
+ },
+ {
+  "language": "markdown",
+  "text": "[A linkk](https://example.com/teh) and **bold mistaek** and _itallic_."
+ },
+ {
+  "language": "markdown",
+  "text": "> A quote wiht an error.\n\nNormal paragraph."
+ },
+ {
+  "language": "markdown",
+  "text": "| Col | Colum |\n| --- | --- |\n| vale | 東京 |"
+ },
+ {
+  "language": "markdown",
+  "text": "## Emoji 🎉 heading\n\nThe 👋 quick brown fox jumpd over teh lazy dog."
+ },
+ {
+  "language": "markdown",
+  "text": "Footnote[^1] here.\n\n[^1]: The the footnote."
+ },
+ {
+  "language": "markdown",
+  "text": "<div>Some html wiht typo</div>\n\nAnd text."
+ },
+ {
+  "language": "markdown",
+  "text": "1. Number one\n2. Numbr two\n3. Number three..."
+ },
+ {
+  "language": "typst",
+  "text": "= Hello, world!\n\nThis is a simple Typst document.\n\n- Item one\n- Item two\n- Item three\n"
+ },
+ {
+  "language": "typst",
+  "text": "= Introdution\n\nThis is an test of typst. #emph[Some emphasised txt]."
+ },
+ {
+  "language": "typst",
+  "text": "#set page(width: 10cm)\n\nThe the paragraph with $x^2$ math and a erorr."
+ },
+ {
+  "language": "typst",
+  "text": "== Section 🚀\n\nUnicode 東京 then mispeled words here."
+ },
+ {
+  "language": "typst",
+  "text": "#let name = \"value\"\n\n*Bold* and _italic_ text wiht typos."
+ },
+ {
+  "language": "typst",
+  "text": "/* comment wiht typo */\nA sentence with a eror in it."
+ }
+]

@@ -1,0 +1,1496 @@
+[
+ {
+  "file": "corpus/00.txt",
+  "lints": [
+   {
+    "rule": "RedundantThat",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 19,
+     "char_end": 28
+    },
+    "message": "Consider whether the second `that` adds meaning in this context.",
+    "suggestions": [
+     "Replace with: “that”"
+    ],
+    "matched_text": "that that"
+   },
+   {
+    "rule": "RepeatedWords",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 0,
+     "char_end": 7
+    },
+    "message": "Did you mean to repeat this word?",
+    "suggestions": [
+     "Replace with: “The”"
+    ],
+    "matched_text": "The the"
+   }
+  ]
+ },
+ {
+  "file": "corpus/01.txt",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 8,
+     "char_end": 10
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “a”"
+    ],
+    "matched_text": "an"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 19,
+     "char_end": 27
+    },
+    "message": "Did you mean to spell `exprting` this way?",
+    "suggestions": [
+     "Replace with: “exerting”",
+     "Replace with: “exporting”",
+     "Replace with: “exacting”"
+    ],
+    "matched_text": "exprting"
+   }
+  ]
+ },
+ {
+  "file": "corpus/02.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 8,
+     "char_end": 11
+    },
+    "message": "Did you mean to spell `ned` this way?",
+    "suggestions": [
+     "Replace with: “need”",
+     "Replace with: “nerd”",
+     "Replace with: “net”"
+    ],
+    "matched_text": "ned"
+   }
+  ]
+ },
+ {
+  "file": "corpus/03.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 25,
+     "char_end": 32
+    },
+    "message": "Did you mean to spell `tomorow` this way?",
+    "suggestions": [
+     "Replace with: “tomorrow”",
+     "Replace with: “tomorrows”",
+     "Replace with: “Comoros”"
+    ],
+    "matched_text": "tomorow"
+   },
+   {
+    "rule": "TheirToTheyre",
+    "kind": "Grammar",
+    "span": {
+     "char_start": 0,
+     "char_end": 5
+    },
+    "message": "Did you mean `they're`?",
+    "suggestions": [
+     "Replace with: “They're”",
+     "Replace with: “They're ”"
+    ],
+    "matched_text": "Their"
+   },
+   {
+    "rule": "ThereToTheir",
+    "kind": "Grammar",
+    "span": {
+     "char_start": 38,
+     "char_end": 43
+    },
+    "message": "Did you mean `their`?",
+    "suggestions": [
+     "Replace with: “their”"
+    ],
+    "matched_text": "there"
+   }
+  ]
+ },
+ {
+  "file": "corpus/04.txt",
+  "lints": [
+   {
+    "rule": "ItsContraction",
+    "kind": "Punctuation",
+    "span": {
+     "char_start": 0,
+     "char_end": 3
+    },
+    "message": "Use `it's` (short for `it has` or `it is`) here, not the possessive `its`.",
+    "suggestions": [
+     "Replace with: “It's”",
+     "Replace with: “It has”"
+    ],
+    "matched_text": "Its"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 16,
+     "char_end": 20
+    },
+    "message": "Did you mean to spell `isnt` this way?",
+    "suggestions": [
+     "Replace with: “isn't”",
+     "Replace with: “inst”",
+     "Replace with: “int”"
+    ],
+    "matched_text": "isnt"
+   }
+  ]
+ },
+ {
+  "file": "corpus/05.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 4,
+     "char_end": 8
+    },
+    "message": "Did you mean to spell `dont` this way?",
+    "suggestions": [
+     "Replace with: “don't”",
+     "Replace with: “dent”",
+     "Replace with: “don”"
+    ],
+    "matched_text": "dont"
+   }
+  ]
+ },
+ {
+  "file": "corpus/06.txt",
+  "lints": [
+   {
+    "rule": "PronounInflectionBe",
+    "kind": "Agreement",
+    "span": {
+     "char_start": 3,
+     "char_end": 6
+    },
+    "message": "Make the verb agree with its subject.",
+    "suggestions": [
+     "Replace with: “were”"
+    ],
+    "matched_text": "was"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 21,
+     "char_end": 28
+    },
+    "message": "Did you mean to spell `happend` this way?",
+    "suggestions": [
+     "Replace with: “happen”",
+     "Replace with: “happened”",
+     "Replace with: “happens”"
+    ],
+    "matched_text": "happend"
+   }
+  ]
+ },
+ {
+  "file": "corpus/07.txt",
+  "lints": [
+   {
+    "rule": "ModalOf",
+    "kind": "Word Choice",
+    "span": {
+     "char_start": 0,
+     "char_end": 8
+    },
+    "message": "Use `have` rather than `of` here.",
+    "suggestions": [
+     "Replace with: “Could have”"
+    ],
+    "matched_text": "Could of"
+   },
+   {
+    "rule": "ModalOf",
+    "kind": "Word Choice",
+    "span": {
+     "char_start": 21,
+     "char_end": 30
+    },
+    "message": "Use `have` rather than `of` here.",
+    "suggestions": [
+     "Replace with: “should have”"
+    ],
+    "matched_text": "should of"
+   }
+  ]
+ },
+ {
+  "file": "corpus/08.txt",
+  "lints": [
+   {
+    "rule": "Spaces",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 21,
+     "char_end": 23
+    },
+    "message": "There are 2 spaces where there should be only one.",
+    "suggestions": [
+     "Replace with: “ ”"
+    ],
+    "matched_text": "  "
+   }
+  ]
+ },
+ {
+  "file": "corpus/09.txt",
+  "lints": [
+   {
+    "rule": "UnclosedQuotes",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 8,
+     "char_end": 9
+    },
+    "message": "This quote has no termination.",
+    "suggestions": [],
+    "matched_text": "\""
+   }
+  ]
+ },
+ {
+  "file": "corpus/10.txt",
+  "lints": []
+ },
+ {
+  "file": "corpus/11.txt",
+  "lints": [
+   {
+    "rule": "CapitalizePersonalPronouns",
+    "kind": "Capitalization",
+    "span": {
+     "char_start": 0,
+     "char_end": 1
+    },
+    "message": "The first-person singular subject pronoun must be capitalized.",
+    "suggestions": [
+     "Replace with: “I”"
+    ],
+    "matched_text": "i"
+   },
+   {
+    "rule": "CapitalizePersonalPronouns",
+    "kind": "Capitalization",
+    "span": {
+     "char_start": 8,
+     "char_end": 9
+    },
+    "message": "The first-person singular subject pronoun must be capitalized.",
+    "suggestions": [
+     "Replace with: “I”"
+    ],
+    "matched_text": "i"
+   }
+  ]
+ },
+ {
+  "file": "corpus/12.txt",
+  "lints": [
+   {
+    "rule": "UseEllipsisCharacter",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 11,
+     "char_end": 14
+    },
+    "message": "Use the Unicode ellipsis character (…).",
+    "suggestions": [
+     "Replace with: “…”"
+    ],
+    "matched_text": "..."
+   }
+  ]
+ },
+ {
+  "file": "corpus/13.txt",
+  "lints": [
+   {
+    "rule": "LongSentences",
+    "kind": "Readability",
+    "span": {
+     "char_start": 0,
+     "char_end": 234
+    },
+    "message": "This sentence is 44 words long.",
+    "suggestions": [],
+    "matched_text": "This is a really long sentensd with some errorz in it, which in an old version of Harper, would get removedd when the bigger \"Long Sentences\" lint was ignored, that isn't what we woant, so we are writing a test for that exact problem."
+   }
+  ]
+ },
+ {
+  "file": "corpus/14.txt",
+  "lints": [
+   {
+    "rule": "MergeWords",
+    "kind": "Word Choice",
+    "span": {
+     "char_start": 0,
+     "char_end": 12
+    },
+    "message": "It seems these words would go better together.",
+    "suggestions": [
+     "Replace with: “outstanding”"
+    ],
+    "matched_text": "outstandin g"
+   }
+  ]
+ },
+ {
+  "file": "corpus/15.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 13,
+     "char_end": 21
+    },
+    "message": "Did you mean to spell `akljsfhl` this way?",
+    "suggestions": [],
+    "matched_text": "akljsfhl"
+   }
+  ]
+ },
+ {
+  "file": "corpus/16.txt",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 0,
+     "char_end": 2
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “A”"
+    ],
+    "matched_text": "An"
+   },
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 33,
+     "char_end": 34
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “an”"
+    ],
+    "matched_text": "a"
+   },
+   {
+    "rule": "RegularIrregulars",
+    "kind": "Grammar",
+    "span": {
+     "char_start": 22,
+     "char_end": 28
+    },
+    "message": "Use the irregular form 'arose' or 'arisen' instead of 'arised'",
+    "suggestions": [
+     "Replace with: “arose”",
+     "Replace with: “arisen”"
+    ],
+    "matched_text": "arised"
+   }
+  ]
+ },
+ {
+  "file": "corpus/17.txt",
+  "lints": [
+   {
+    "rule": "OpenCompounds",
+    "kind": "BoundaryError",
+    "span": {
+     "char_start": 0,
+     "char_end": 4
+    },
+    "message": "`a lot` should be written as two words.",
+    "suggestions": [
+     "Replace with: “A lot”"
+    ],
+    "matched_text": "Alot"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 15,
+     "char_end": 19
+    },
+    "message": "Did you mean to spell `dont` this way?",
+    "suggestions": [
+     "Replace with: “don't”",
+     "Replace with: “dent”",
+     "Replace with: “don”"
+    ],
+    "matched_text": "dont"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 29,
+     "char_end": 38
+    },
+    "message": "Did you mean to spell `diffrence` this way?",
+    "suggestions": [
+     "Replace with: “difference”",
+     "Replace with: “deference”",
+     "Replace with: “differences”"
+    ],
+    "matched_text": "diffrence"
+   }
+  ]
+ },
+ {
+  "file": "corpus/18.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 6,
+     "char_end": 12
+    },
+    "message": "Did you mean to spell `mañana` this way?",
+    "suggestions": [
+     "Replace with: “manana”",
+     "Replace with: “marina”",
+     "Replace with: “manna”"
+    ],
+    "matched_text": "mañana"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 14,
+     "char_end": 18
+    },
+    "message": "Did you mean to spell `como` this way?",
+    "suggestions": [
+     "Replace with: “coco”",
+     "Replace with: “com”",
+     "Replace with: “coma”"
+    ],
+    "matched_text": "como"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 29,
+     "char_end": 32
+    },
+    "message": "Did you mean to spell `los` this way?",
+    "suggestions": [
+     "Replace with: “loos”",
+     "Replace with: “loss”",
+     "Replace with: “Los”"
+    ],
+    "matched_text": "los"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 33,
+     "char_end": 39
+    },
+    "message": "Did you mean to spell `huevos` this way?",
+    "suggestions": [
+     "Replace with: “hue's”",
+     "Replace with: “hues”"
+    ],
+    "matched_text": "huevos"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 41,
+     "char_end": 43
+    },
+    "message": "Did you mean to spell `un` this way?",
+    "suggestions": [
+     "Replace with: “uh”",
+     "Replace with: “um”",
+     "Replace with: “up”"
+    ],
+    "matched_text": "un"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 44,
+     "char_end": 51
+    },
+    "message": "Did you mean `mosquito`?",
+    "suggestions": [
+     "Replace with: “mosquito”"
+    ],
+    "matched_text": "poquito"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 55,
+     "char_end": 61
+    },
+    "message": "Did you mean to spell `tocino` this way?",
+    "suggestions": [
+     "Replace with: “techno”",
+     "Replace with: “toxin”",
+     "Replace with: “tocsin”"
+    ],
+    "matched_text": "tocino"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 74,
+     "char_end": 79
+    },
+    "message": "Did you mean to spell `leche` this way?",
+    "suggestions": [
+     "Replace with: “lech”",
+     "Replace with: “leched”",
+     "Replace with: “lecher”"
+    ],
+    "matched_text": "leche"
+   }
+  ]
+ },
+ {
+  "file": "corpus/19.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 17,
+     "char_end": 28
+    },
+    "message": "Did you mean to spell `neighbour's` this way?",
+    "suggestions": [
+     "Replace with: “neighbor's”",
+     "Replace with: “neighbors”"
+    ],
+    "matched_text": "neighbour's"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 29,
+     "char_end": 35
+    },
+    "message": "Did you mean to spell `centre` this way?",
+    "suggestions": [
+     "Replace with: “center”",
+     "Replace with: “cent's”",
+     "Replace with: “censure”"
+    ],
+    "matched_text": "centre"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 40,
+     "char_end": 44
+    },
+    "message": "Did you mean to spell `grey` this way?",
+    "suggestions": [
+     "Replace with: “gray”",
+     "Replace with: “grew”",
+     "Replace with: “grep”"
+    ],
+    "matched_text": "grey"
+   }
+  ]
+ },
+ {
+  "file": "corpus/20.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 44,
+     "char_end": 50
+    },
+    "message": "Did you mean to spell `sdssda` this way?",
+    "suggestions": [
+     "Replace with: “sass's”",
+     "Replace with: “salsa”",
+     "Replace with: “sassy”"
+    ],
+    "matched_text": "sdssda"
+   }
+  ]
+ },
+ {
+  "file": "corpus/21.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 2,
+     "char_end": 6
+    },
+    "message": "Did you mean to spell `Helo` this way?",
+    "suggestions": [
+     "Replace with: “Hello”",
+     "Replace with: “Halo”",
+     "Replace with: “Held”"
+    ],
+    "matched_text": "Helo"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 7,
+     "char_end": 12
+    },
+    "message": "Did you mean to spell `wrold` this way?",
+    "suggestions": [
+     "Replace with: “world”",
+     "Replace with: “wold”",
+     "Replace with: “who'd”"
+    ],
+    "matched_text": "wrold"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 17,
+     "char_end": 21
+    },
+    "message": "Did you mean to spell `Thsi` this way?",
+    "suggestions": [
+     "Replace with: “This”",
+     "Replace with: “Thai”",
+     "Replace with: “Than”"
+    ],
+    "matched_text": "Thsi"
+   }
+  ]
+ },
+ {
+  "file": "corpus/22.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 34,
+     "char_end": 41
+    },
+    "message": "Did you mean to spell `recieve` this way?",
+    "suggestions": [
+     "Replace with: “receive”",
+     "Replace with: “relieve”",
+     "Replace with: “recipe”"
+    ],
+    "matched_text": "recieve"
+   }
+  ]
+ },
+ {
+  "file": "corpus/23.txt",
+  "lints": [
+   {
+    "rule": "The",
+    "kind": "Typo",
+    "span": {
+     "char_start": 36,
+     "char_end": 39
+    },
+    "message": "Did you mean the definite article?",
+    "suggestions": [
+     "Replace with: “the”"
+    ],
+    "matched_text": "teh"
+   }
+  ]
+ },
+ {
+  "file": "corpus/24.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 21,
+     "char_end": 29
+    },
+    "message": "Did you mean to spell `sentense` this way?",
+    "suggestions": [
+     "Replace with: “sentence”",
+     "Replace with: “sentenced”",
+     "Replace with: “sentences”"
+    ],
+    "matched_text": "sentense"
+   }
+  ]
+ },
+ {
+  "file": "corpus/25.txt",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 16,
+     "char_end": 18
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “a”"
+    ],
+    "matched_text": "an"
+   },
+   {
+    "rule": "SplitWords",
+    "kind": "Typo",
+    "span": {
+     "char_start": 19,
+     "char_end": 26
+    },
+    "message": "`misteak` should probably be written as `mi steak`.",
+    "suggestions": [
+     "Replace with: “mi steak”"
+    ],
+    "matched_text": "misteak"
+   }
+  ]
+ },
+ {
+  "file": "corpus/26.txt",
+  "lints": []
+ },
+ {
+  "file": "corpus/27.txt",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 34,
+     "char_end": 35
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “an”"
+    ],
+    "matched_text": "a"
+   }
+  ]
+ },
+ {
+  "file": "corpus/28.txt",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 18,
+     "char_end": 27
+    },
+    "message": "Did you mean to spell `coöperate` this way?",
+    "suggestions": [
+     "Replace with: “cooperate”",
+     "Replace with: “corporate”",
+     "Replace with: “cooperage”"
+    ],
+    "matched_text": "coöperate"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 34,
+     "char_end": 41
+    },
+    "message": "Did you mean to spell `speling` this way?",
+    "suggestions": [
+     "Replace with: “spelling”",
+     "Replace with: “spewing”",
+     "Replace with: “spieling”"
+    ],
+    "matched_text": "speling"
+   }
+  ]
+ },
+ {
+  "file": "corpus/29.txt",
+  "lints": [
+   {
+    "rule": "RepeatedWords",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 22,
+     "char_end": 29
+    },
+    "message": "Did you mean to repeat this word?",
+    "suggestions": [
+     "Replace with: “the”"
+    ],
+    "matched_text": "the the"
+   }
+  ]
+ },
+ {
+  "file": "corpus/30.txt",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 42,
+     "char_end": 43
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “an”"
+    ],
+    "matched_text": "a"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 44,
+     "char_end": 48
+    },
+    "message": "Did you mean to spell `eror` this way?",
+    "suggestions": [
+     "Replace with: “err”",
+     "Replace with: “error”",
+     "Replace with: “e'er”"
+    ],
+    "matched_text": "eror"
+   }
+  ]
+ },
+ {
+  "file": "corpus/31.txt",
+  "lints": [
+   {
+    "rule": "SplitWords",
+    "kind": "Typo",
+    "span": {
+     "char_start": 40,
+     "char_end": 45
+    },
+    "message": "`bfore` should probably be written as `bf ore`.",
+    "suggestions": [
+     "Replace with: “bf ore”"
+    ],
+    "matched_text": "bfore"
+   }
+  ]
+ },
+ {
+  "file": "corpus/32.txt",
+  "lints": [
+   {
+    "rule": "Spaces",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 4,
+     "char_end": 5
+    },
+    "message": "There are 2 spaces where there should be only one.",
+    "suggestions": [
+     "Replace with: “ ”"
+    ],
+    "matched_text": "\t"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 36,
+     "char_end": 40
+    },
+    "message": "Did you mean to spell `wiht` this way?",
+    "suggestions": [
+     "Replace with: “with”",
+     "Replace with: “whit”",
+     "Replace with: “wight”"
+    ],
+    "matched_text": "wiht"
+   }
+  ]
+ },
+ {
+  "file": "corpus/33.txt",
+  "lints": []
+ },
+ {
+  "file": "corpus/34.txt",
+  "lints": [
+   {
+    "rule": "NoFrenchSpaces",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 0,
+     "char_end": 3
+    },
+    "message": "French spaces are generally not recommended.",
+    "suggestions": [
+     "Replace with: “ ”"
+    ],
+    "matched_text": "   "
+   },
+   {
+    "rule": "NoFrenchSpaces",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 5,
+     "char_end": 7
+    },
+    "message": "French spaces are generally not recommended.",
+    "suggestions": [
+     "Replace with: “ ”"
+    ],
+    "matched_text": "  "
+   }
+  ]
+ },
+ {
+  "file": "corpus/35.md",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 42,
+     "char_end": 44
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “a”"
+    ],
+    "matched_text": "an"
+   },
+   {
+    "rule": "UseTitleCase",
+    "kind": "Capitalization",
+    "span": {
+     "char_start": 0,
+     "char_end": 32
+    },
+    "message": "Try to use title case in headings.",
+    "suggestions": [
+     "Replace with: “# This Heading Is Not Title Case”"
+    ],
+    "matched_text": "# this heading is not title case"
+   }
+  ]
+ },
+ {
+  "file": "corpus/36.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 34,
+     "char_end": 39
+    },
+    "message": "Did you mean to spell `realy` this way?",
+    "suggestions": [
+     "Replace with: “really”",
+     "Replace with: “ready”",
+     "Replace with: “real”"
+    ],
+    "matched_text": "realy"
+   }
+  ]
+ },
+ {
+  "file": "corpus/37.md",
+  "lints": [
+   {
+    "rule": "RepeatedWords",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 41,
+     "char_end": 48
+    },
+    "message": "Did you mean to repeat this word?",
+    "suggestions": [
+     "Replace with: “the”"
+    ],
+    "matched_text": "the the"
+   }
+  ]
+ },
+ {
+  "file": "corpus/38.md",
+  "lints": [
+   {
+    "rule": "SplitWords",
+    "kind": "Typo",
+    "span": {
+     "char_start": 8,
+     "char_end": 12
+    },
+    "message": "`iten` should possibly be written as `i ten`.",
+    "suggestions": [
+     "Replace with: “i ten”"
+    ],
+    "matched_text": "iten"
+   },
+   {
+    "rule": "SplitWords",
+    "kind": "Typo",
+    "span": {
+     "char_start": 42,
+     "char_end": 46
+    },
+    "message": "`itme` should probably be written as `it me`.",
+    "suggestions": [
+     "Replace with: “it me”"
+    ],
+    "matched_text": "itme"
+   }
+  ]
+ },
+ {
+  "file": "corpus/39.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 3,
+     "char_end": 8
+    },
+    "message": "Did you mean to spell `linkk` this way?",
+    "suggestions": [
+     "Replace with: “link”",
+     "Replace with: “links”",
+     "Replace with: “link's”"
+    ],
+    "matched_text": "linkk"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 46,
+     "char_end": 53
+    },
+    "message": "Did you mean to spell `mistaek` this way?",
+    "suggestions": [
+     "Replace with: “mistake”",
+     "Replace with: “mistaken”",
+     "Replace with: “mistakes”"
+    ],
+    "matched_text": "mistaek"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 61,
+     "char_end": 68
+    },
+    "message": "Did you mean to spell `itallic` this way?",
+    "suggestions": [
+     "Replace with: “italic”",
+     "Replace with: “idyllic”",
+     "Replace with: “italics”"
+    ],
+    "matched_text": "itallic"
+   }
+  ]
+ },
+ {
+  "file": "corpus/40.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 10,
+     "char_end": 14
+    },
+    "message": "Did you mean to spell `wiht` this way?",
+    "suggestions": [
+     "Replace with: “with”",
+     "Replace with: “whit”",
+     "Replace with: “wight”"
+    ],
+    "matched_text": "wiht"
+   }
+  ]
+ },
+ {
+  "file": "corpus/41.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 8,
+     "char_end": 13
+    },
+    "message": "Did you mean to spell `Colum` this way?",
+    "suggestions": [
+     "Replace with: “Column”",
+     "Replace with: “Col's”",
+     "Replace with: “Calm”"
+    ],
+    "matched_text": "Colum"
+   }
+  ]
+ },
+ {
+  "file": "corpus/42.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 42,
+     "char_end": 47
+    },
+    "message": "Did you mean to spell `jumpd` this way?",
+    "suggestions": [
+     "Replace with: “jump”",
+     "Replace with: “jumps”",
+     "Replace with: “jumped”"
+    ],
+    "matched_text": "jumpd"
+   },
+   {
+    "rule": "The",
+    "kind": "Typo",
+    "span": {
+     "char_start": 53,
+     "char_end": 56
+    },
+    "message": "Did you mean the definite article?",
+    "suggestions": [
+     "Replace with: “the”"
+    ],
+    "matched_text": "teh"
+   },
+   {
+    "rule": "UseTitleCase",
+    "kind": "Capitalization",
+    "span": {
+     "char_start": 0,
+     "char_end": 18
+    },
+    "message": "Try to use title case in headings.",
+    "suggestions": [
+     "Replace with: “## Emoji 🎉 Heading”"
+    ],
+    "matched_text": "## Emoji 🎉 heading"
+   }
+  ]
+ },
+ {
+  "file": "corpus/43.md",
+  "lints": [
+   {
+    "rule": "RepeatedWords",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 26,
+     "char_end": 33
+    },
+    "message": "Did you mean to repeat this word?",
+    "suggestions": [
+     "Replace with: “The”"
+    ],
+    "matched_text": "The the"
+   }
+  ]
+ },
+ {
+  "file": "corpus/44.md",
+  "lints": []
+ },
+ {
+  "file": "corpus/45.md",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 17,
+     "char_end": 22
+    },
+    "message": "Did you mean to spell `Numbr` this way?",
+    "suggestions": [
+     "Replace with: “Numb”",
+     "Replace with: “Number”",
+     "Replace with: “Numbs”"
+    ],
+    "matched_text": "Numbr"
+   },
+   {
+    "rule": "UseEllipsisCharacter",
+    "kind": "Formatting",
+    "span": {
+     "char_start": 42,
+     "char_end": 45
+    },
+    "message": "Use the Unicode ellipsis character (…).",
+    "suggestions": [
+     "Replace with: “…”"
+    ],
+    "matched_text": "..."
+   }
+  ]
+ },
+ {
+  "file": "corpus/46.typ",
+  "lints": []
+ },
+ {
+  "file": "corpus/47.typ",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 23,
+     "char_end": 25
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “a”"
+    ],
+    "matched_text": "an"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 2,
+     "char_end": 13
+    },
+    "message": "Did you mean to spell `Introdution` this way?",
+    "suggestions": [
+     "Replace with: “Introduction”",
+     "Replace with: “Introductions”"
+    ],
+    "matched_text": "Introdution"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 34,
+     "char_end": 39
+    },
+    "message": "Did you mean to spell `typst` this way?",
+    "suggestions": [
+     "Replace with: “typist”",
+     "Replace with: “test”",
+     "Replace with: “toast”"
+    ],
+    "matched_text": "typst"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 52,
+     "char_end": 62
+    },
+    "message": "Did you mean to spell `emphasised` this way?",
+    "suggestions": [
+     "Replace with: “emphasized”",
+     "Replace with: “emphasis's”",
+     "Replace with: “emphasis”"
+    ],
+    "matched_text": "emphasised"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 63,
+     "char_end": 66
+    },
+    "message": "Did you mean to spell `txt` this way?",
+    "suggestions": [
+     "Replace with: “tat”",
+     "Replace with: “text”",
+     "Replace with: “tit”"
+    ],
+    "matched_text": "txt"
+   }
+  ]
+ },
+ {
+  "file": "corpus/48.typ",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 62,
+     "char_end": 63
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “an”"
+    ],
+    "matched_text": "a"
+   },
+   {
+    "rule": "RepeatedWords",
+    "kind": "Repetition",
+    "span": {
+     "char_start": 24,
+     "char_end": 31
+    },
+    "message": "Did you mean to repeat this word?",
+    "suggestions": [
+     "Replace with: “The”"
+    ],
+    "matched_text": "The the"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 64,
+     "char_end": 69
+    },
+    "message": "Did you mean to spell `erorr` this way?",
+    "suggestions": [
+     "Replace with: “error”",
+     "Replace with: “erode”",
+     "Replace with: “err”"
+    ],
+    "matched_text": "erorr"
+   }
+  ]
+ },
+ {
+  "file": "corpus/49.typ",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 30,
+     "char_end": 38
+    },
+    "message": "Did you mean to spell `mispeled` this way?",
+    "suggestions": [
+     "Replace with: “misled”",
+     "Replace with: “misdeed”",
+     "Replace with: “misfiled”"
+    ],
+    "matched_text": "mispeled"
+   }
+  ]
+ },
+ {
+  "file": "corpus/50.typ",
+  "lints": [
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 46,
+     "char_end": 50
+    },
+    "message": "Did you mean to spell `wiht` this way?",
+    "suggestions": [
+     "Replace with: “with”",
+     "Replace with: “whit”",
+     "Replace with: “wight”"
+    ],
+    "matched_text": "wiht"
+   }
+  ]
+ },
+ {
+  "file": "corpus/51.typ",
+  "lints": [
+   {
+    "rule": "AnA",
+    "kind": "Miscellaneous",
+    "span": {
+     "char_start": 40,
+     "char_end": 41
+    },
+    "message": "Incorrect indefinite article.",
+    "suggestions": [
+     "Replace with: “an”"
+    ],
+    "matched_text": "a"
+   },
+   {
+    "rule": "SpellCheck",
+    "kind": "Spelling",
+    "span": {
+     "char_start": 42,
+     "char_end": 46
+    },
+    "message": "Did you mean to spell `eror` this way?",
+    "suggestions": [
+     "Replace with: “err”",
+     "Replace with: “error”",
+     "Replace with: “e'er”"
+    ],
+    "matched_text": "eror"
+   }
+  ]
+ }
+]
