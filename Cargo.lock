@@ -2320,7 +2320,7 @@ dependencies = [
 
 [[package]]
 name = "harper-py"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "harper-core",
  "harper-stats",

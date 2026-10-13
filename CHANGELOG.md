@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 (2026-10-13)
+
+- Python 3.15 is tested in CI and listed in the classifiers. The 0.1.0 abi3 wheels already
+  run on it; this release only updates the metadata.
+
 ## 0.1.0 (2026-10-11)
 
 First release: bindings for Harper 2.11.0 mirroring harper.js's `Linter` interface.
