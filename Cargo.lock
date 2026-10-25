@@ -2265,9 +2265,9 @@ dependencies = [
 
 [[package]]
 name = "harper-core"
-version = "2.11.0"
+version = "2.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f13df91e64d8853e30af2ae8cb16f7035cee348ae04d8c9c94588ab23e1042a9"
+checksum = "1d88acd51ecd32aa6a7fcf1fd9f858bbbe507a935bcf31ddd833b454ae804a69"
 dependencies = [
  "ammonia",
  "bitflags",
@@ -2320,7 +2320,7 @@ dependencies = [
 
 [[package]]
 name = "harper-py"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "harper-core",
  "harper-stats",
@@ -2332,9 +2332,9 @@ dependencies = [
 
 [[package]]
 name = "harper-stats"
-version = "2.11.0"
+version = "2.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "431fb09f14c9cbe9fcabdd5ebf871c0f25211785a80c1942a091ed057ff6fb7e"
+checksum = "53b693f1155cdfa89a63f38e2d8516493863ad525b023acb1822e1be21e3e1d3"
 dependencies = [
  "chrono",
  "harper-core",
@@ -2358,9 +2358,9 @@ dependencies = [
 
 [[package]]
 name = "harper-typst"
-version = "2.11.0"
+version = "2.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "365e2add8da0d73820971c2e40924ce9029facbda8033dd2c6657c50a52e78b2"
+checksum = "6750c6ff4aa03a3e4e9261d6ad2b89927c946d3938c4362275cf80420273b04a"
 dependencies = [
  "harper-core",
  "itertools 0.15.0",

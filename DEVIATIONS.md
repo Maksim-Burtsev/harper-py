@@ -1,8 +1,8 @@
 # Deviations from harper.js
 
-The linting is Harper 2.11.0's, untouched: the binding layer is harper-wasm's `lib.rs` ported
+The linting is Harper 2.13.0's, untouched: the binding layer is harper-wasm's `lib.rs` ported
 from wasm-bindgen to PyO3, and the same text gives the same lints, messages and suggestions
-(checked against `harper-cli` 2.11.0 in `tests/parity`). What follows is everything a
+(checked against `harper-cli` 2.13.0 in `tests/parity`). What follows is everything a
 harper.js user would notice in Python.
 
 ## 1. Spans are `str` indices

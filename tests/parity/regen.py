@@ -1,6 +1,6 @@
 """Regenerate expected.json from harper-cli of the pinned Harper version.
 
-    cargo build --release -p harper-cli   # in a checkout of Harper's v2.11.0 tag
+    cargo build --release -p harper-cli   # in a checkout of Harper's v2.13.0 tag
     python tests/parity/regen.py path/to/harper-cli
 """
 

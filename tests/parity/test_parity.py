@@ -1,4 +1,4 @@
-"""Golden parity with harper-cli 2.11.0: same rules, spans, messages and suggestions.
+"""Golden parity with harper-cli 2.13.0: same rules, spans, messages and suggestions.
 
 harper-cli reports character (code point) offsets, which are this package's span units.
 `regen.py` rebuilds expected.json from the CLI.

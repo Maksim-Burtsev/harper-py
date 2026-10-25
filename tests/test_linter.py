@@ -1,4 +1,4 @@
-"""harper.js's packages/harper.js/src/Linter.test.ts (v2.11.0), ported 1:1 where it applies.
+"""harper.js's packages/harper.js/src/Linter.test.ts (v2.13.0), ported 1:1 where it applies.
 
 Not ported: `setup()`, `dispose()` and the Blob variants (no such API here, DEVIATIONS.md 2),
 and the two WorkerLinter-vs-LocalLinter config comparisons (there is one Linter). The

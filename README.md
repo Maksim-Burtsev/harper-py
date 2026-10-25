@@ -60,7 +60,7 @@ needs a Rust toolchain.
 
 `Linter` is harper.js's `Linter` interface, synchronous: `organizedLints` →
 `organized_lints`, `getLintConfig` → `get_lint_config`, `LintOptions` → keyword
-arguments. Harper inside is **2.11.0** (`harper-core`, `harper-stats`, `harper-typst`
+arguments. Harper inside is **2.13.0** (`harper-core`, `harper-stats`, `harper-typst`
 from crates.io), with harper-wasm's features. Lints are checked against `harper-cli` of
 the same version on a 52-document corpus, and harper.js's own test suite is ported.
 Every difference is listed in

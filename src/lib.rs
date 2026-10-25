@@ -1,4 +1,4 @@
-// The binding layer is ported from harper-wasm/src/lib.rs of Harper 2.11.0
+// The binding layer is ported from harper-wasm/src/lib.rs of Harper 2.13.0
 // (https://github.com/Automattic/harper), Copyright Automattic Inc. and Harper contributors,
 // licensed under the Apache License, Version 2.0. Changes: wasm-bindgen replaced by PyO3,
 // spans kept in Unicode code points instead of UTF-16 code units, JSON/JsValue twins merged

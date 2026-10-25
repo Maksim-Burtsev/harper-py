@@ -9,7 +9,7 @@ Every difference from harper.js is listed in `DEVIATIONS.md`. A behaviour fork n
 
 - PyPI name `harper-py`, import name `harper`. Own versioning from `0.1.0`.
 - Rust: PyO3 (abi3, Python >= 3.10) + maturin, mixed layout (`python/harper/__init__.py`, `_harper` extension, `__init__.pyi`, `py.typed`).
-- Upstream: `harper-core`, `harper-stats`, `harper-typst` pinned `=2.11.0` from crates.io (the latest version published there; the GitHub tag v2.12.0 is not on crates.io). Same features as harper-wasm defaults: `typst`, `thesaurus`. The README states the pinned Harper version.
+- Upstream: `harper-core`, `harper-stats`, `harper-typst` pinned `=2.13.0` from crates.io. Same features as harper-wasm defaults: `typst`, `thesaurus`. The README states the pinned Harper version.
 - License Apache-2.0 (same as upstream), copyright notice for Automattic's code where copied (the binding layer is ported from harper-wasm).
 
 ## API (Python names → harper.js names)
